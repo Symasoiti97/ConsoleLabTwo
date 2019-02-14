@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace ConsoleLabTwo
 {
@@ -10,6 +10,14 @@ namespace ConsoleLabTwo
     {
         static void Main(string[] args)
         {
+            Person player;// = new Person("Name", new WSward());
+            player = Person.getInstance("Name", new WSward());
+            player.attack();
+            player.weapon = new WBow();
+            player.attack();
+            player.weapon = new WMagic();
+            player.attack();
+            Console.ReadLine();
         }
     }
 }
